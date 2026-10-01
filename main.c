@@ -18,20 +18,18 @@ double df(double x) {
 int main() {
     // Налаштування мови для виводу кирилиці
     setlocale(LC_ALL, "uk_UA.UTF-8");
-
+    //Оголошення змінних та ініціалізування
     int choice = 0;
     double X1 = 0.0, X2 = 0.0, delta = 0.0;
     int N = 0;
 
-    do{
-    system("cls");
     // Текстовий інтерфейс
     printf("Оберіть варіант введення початкових даних:\n");
     printf("1. X1 (початкове), X2 (кінцеве), N (кількість точок)\n");
     printf("2. X1 (початкове), X2 (кінцеве), delta (крок зміни)\n");
     printf("Ваш вибір (1 або 2): ");
     scanf("%d", &choice);
-    }while(choice < 1|| choice > 2);
+
 
     if (choice == 1) {
         printf("\n--- Введення даних (Варіант 1) ---\n");
@@ -74,10 +72,18 @@ int main() {
     printf("│   N   │     X      │    Y(X)    │   Y'(X)    │\n");
     printf("├───────┼────────────┼────────────┼────────────┤\n");
 
-    for (int i = 0; i < N; ++i) {
+    //Вивіди даних на консоль
+    for (int i = 0; i < N; ++i)
+`   {
+
+
         double x_current = X1 + i * delta;
+
+
+
         double y = f(x_current);
         double dy = df(x_current);
+
 
         printf("│ %5d │ %10.4f │ %10.4f │ %10.4f │\n", i + 1, x_current, y, dy);
     }
