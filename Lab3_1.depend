@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1790844308 source:c:\disk d\informatica project kpi\prog\lab3_1\main.c
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<locale.h>
+
