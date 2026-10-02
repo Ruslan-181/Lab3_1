@@ -5,3 +5,23 @@
 	<stdlib.h>
 	<locale.h>
 
+1790935975 source:c:\disk d\informatica project kpi\prog\lab3_1\math_df.c
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<locale.h>
+	"math_df.h"
+	"math_f.h"
+
+1790935975 source:c:\disk d\informatica project kpi\prog\lab3_1\math_f.c
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<locale.h>
+	"math_df.h"
+	"math_f.h"
+
+1790935797 c:\disk d\informatica project kpi\prog\lab3_1\math_df.h
+
+1790935797 c:\disk d\informatica project kpi\prog\lab3_1\math_f.h
+

@@ -2,18 +2,9 @@
 #include <math.h>
 #include <stdlib.h>
 #include <locale.h>
+#include "math_df.h"
+#include "math_f.h"
 
-// Математична функція f(x)
-double f(double x) {
-    double term = (x / 16.0) - 4.0;
-    return 8.0 * pow(term, 3) - 4.0 * x - 12.0;
-}
-
-// Похідна функції f'(x)
-double df(double x) {
-    double term = (x / 16.0) - 4.0;
-    return 1.5 * pow(term, 2) - 4.0;
-}
 
 int main() {
     // Налаштування мови для виводу кирилиці
@@ -24,14 +15,17 @@ int main() {
     int N = 0;
 
     // Текстовий інтерфейс
+    do{
+    system("cls");
     printf("Оберіть варіант введення початкових даних:\n");
     printf("1. X1 (початкове), X2 (кінцеве), N (кількість точок)\n");
     printf("2. X1 (початкове), X2 (кінцеве), delta (крок зміни)\n");
     printf("Ваш вибір (1 або 2): ");
     scanf("%d", &choice);
-
+    }while(choice<1||choice>2);
 
     if (choice == 1) {
+
         printf("\n--- Введення даних (Варіант 1) ---\n");
         printf("Введіть X1 (початкове значення): ");
         scanf("%lf", &X1);
@@ -74,7 +68,7 @@ int main() {
 
     //Вивіди даних на консоль
     for (int i = 0; i < N; ++i)
-`   {
+    {
 
 
         double x_current = X1 + i * delta;
